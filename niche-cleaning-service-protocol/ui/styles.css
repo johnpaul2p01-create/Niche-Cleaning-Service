@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+header {
+  padding: 1.5rem;
+  background: #020617;
+  border-bottom: 1px solid #1f2937;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+}
+
+.tagline {
+  margin: 0;
+  color: #9ca3af;
+}
+
+main {
+  padding: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+#role-switcher {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#role-switcher button {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+#role-switcher button.active {
+  background: #22c55e;
+  border-color: #22c55e;
+  color: #020617;
+}
+
+.panel {
+  display: block;
+}
+
+.panel.hidden {
+  display: none;
+}
+
+.card {
+  background: #020617;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #1f2937;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.4rem 0.6rem;
+  border-radius: 0.375rem;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+}
+
+button[type="submit"],
+button.action {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  background: #22c55e;
+  color: #020617;
+  cursor: pointer;
+}
+
+.status {
+  min-height: 1.2rem;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.status.error {
+  color: #f97373;
+}
+
+.status.success {
+  color: #4ade80;
+}
+
+#open-jobs .job {
+  border-bottom: 1px solid #1f2937;
+  padding: 0.5rem 0;
+}
+
+#open-jobs .job:last-child {
+  border-bottom: none;
+}
+
+footer {
+  padding: 1rem 1.5rem 1.5rem;
+  color: #6b7280;
+}

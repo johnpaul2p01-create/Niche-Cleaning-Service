@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Niche Cleaning Service Protocol</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Niche Cleaning Service Protocol</h1>
+      <p class="tagline">
+        Specialized cleaning for post-renovation, bereavement homes, and child gear disinfection.
+      </p>
+    </header>
+
+    <main>
+      <section id="role-switcher">
+        <button id="customer-view-btn" class="active">Customer View</button>
+        <button id="provider-view-btn">Provider View</button>
+      </section>
+
+      <section id="customer-view" class="panel">
+        <h2>Customer: Create a Cleaning Job</h2>
+        <form id="create-job-form">
+          <label>
+            Category
+            <select id="job-category">
+              <option value="1">Post-renovation cleaning</option>
+              <option value="2">Bereavement home cleaning</option>
+              <option value="3">Child gear disinfection</option>
+            </select>
+          </label>
+
+          <label>
+            Price (microSTX)
+            <input type="number" id="job-price" min="1" required />
+          </label>
+
+          <button type="submit">Create Job &amp; Escrow STX</button>
+          <p id="create-job-status" class="status"></p>
+        </form>
+
+        <h3>Your Latest Job</h3>
+        <div id="latest-job"></div>
+      </section>
+
+      <section id="provider-view" class="panel hidden">
+        <h2>Provider: Liquidity &amp; Jobs</h2>
+
+        <div class="card">
+          <h3>Liquidity Dashboard</h3>
+          <p>
+            Liquidity represents funds you stake to underwrite specialized cleaning jobs.
+          </p>
+          <div id="liquidity-info"></div>
+          <form id="deposit-form">
+            <label>
+              Deposit amount (microSTX)
+              <input type="number" id="deposit-amount" min="1" required />
+            </label>
+            <button type="submit">Deposit Liquidity</button>
+          </form>
+
+          <form id="withdraw-form">
+            <label>
+              Withdraw amount (microSTX)
+              <input type="number" id="withdraw-amount" min="1" required />
+            </label>
+            <button type="submit">Withdraw Liquidity</button>
+          </form>
+          <p id="liquidity-status" class="status"></p>
+        </div>
+
+        <div class="card">
+          <h3>Open Jobs</h3>
+          <p>
+            Accept jobs that match your specialization and available liquidity.
+          </p>
+          <div id="open-jobs"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <small>
+        This UI is a prototype for interacting with the Niche Cleaning Service Clarity
+        contract in a Clarinet simnet.
+      </small>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
